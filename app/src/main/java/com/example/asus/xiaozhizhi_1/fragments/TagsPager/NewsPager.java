@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.asus.xiaozhizhi_1.fragments.Base.BasePager;
-import com.example.asus.xiaozhizhi_1.fragments.NewsDetailPager;
+import com.example.asus.xiaozhizhi_1.fragments.NewsViewpager;
 
 import java.util.ArrayList;
 
@@ -38,8 +38,8 @@ public class NewsPager extends BasePager {
 
 	public void setNewsDetailPager() {
 		// 重新给frameLayout添加内容
-		NewsDetailPager newsDetailPager=new NewsDetailPager(mActivity);
-		View view = newsDetailPager.mRootView;// 当前页面的布局
+		NewsViewpager newsViewpagerPager =new NewsViewpager(mActivity);
+		View view = newsViewpagerPager.mRootView;// 当前页面的布局
 
 		// 清除之前旧的布局
 		flContent.removeAllViews();
@@ -47,7 +47,7 @@ public class NewsPager extends BasePager {
 		flContent.addView(view);// 给帧布局添加布局
 		Log.e("NewsPager```````````","```````NewsPager`````flContent```addView");
 		// 初始化页面数据
-		newsDetailPager.initData();
+		newsViewpagerPager.initData();
 
 	}
 }

@@ -1,6 +1,8 @@
 package com.example.asus.xiaozhizhi_1.fragments.TagsPager;
 
 import android.app.Activity;
+import android.graphics.Color;
+import android.widget.TextView;
 
 import com.example.asus.xiaozhizhi_1.fragments.Base.BasePager;
 
@@ -12,9 +14,10 @@ import com.example.asus.xiaozhizhi_1.fragments.Base.BasePager;
  */
 public class ReadPager extends BasePager {
 
-//	private ArrayList<BaseMenuDetailPager> mMenuDetailPagers;// 菜单详情页集合
+//	private ArrayList<BasePageDetail> mMenuDetailPagers;// 菜单详情页集合
 //	private NewsMenu mNewsData;// 分类信息网络数据
 
+	private TextView view;
 	public ReadPager(Activity activity) {
 		super(activity);
 	}
@@ -33,6 +36,14 @@ public class ReadPager extends BasePager {
 			System.out.println("发现缓存啦...");
 			processData(cache);*/
 
+	}
+
+	public void setText(String s){
+		view =new TextView(mActivity);
+		view.setText(s);
+		view.setTextColor(Color.RED);
+		 view.setTextSize(12);
+		flContent.addView(view);
 	}
 
 
@@ -54,7 +65,7 @@ public class ReadPager extends BasePager {
 		fragment.setMenuData(mNewsData.data);
 
 		// 初始化4个菜单详情页
-		mMenuDetailPagers = new ArrayList<BaseMenuDetailPager>();
+		mMenuDetailPagers = new ArrayList<BasePageDetail>();
 		mMenuDetailPagers.add(new NewsMenuDetailPager(mActivity));
 		mMenuDetailPagers.add(new TopicMenuDetailPager(mActivity));
 		mMenuDetailPagers.add(new PhotosMenuDetailPager(mActivity));
@@ -67,7 +78,7 @@ public class ReadPager extends BasePager {
 	// 设置菜单详情页
 	public void setCurrentDetailPager(int position) {
 		// 重新给frameLayout添加内容
-		BaseMenuDetailPager pager = mMenuDetailPagers.get(position);// 获取当前应该显示的页面
+		BasePageDetail pager = mMenuDetailPagers.get(position);// 获取当前应该显示的页面
 		View view = pager.mRootView;// 当前页面的布局
 
 		// 清除之前旧的布局

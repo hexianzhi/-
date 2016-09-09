@@ -1,11 +1,11 @@
 package com.example.asus.xiaozhizhi_1.Activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -21,7 +21,7 @@ import com.example.asus.xiaozhizhi_1.utils.ScreenUtil;
 
 import java.util.ArrayList;
 
-public class GuideActivity extends AppCompatActivity {
+public class GuideActivity extends Activity {
 
 
     private static int[] guide_iv_Ids =new int[]{

@@ -10,8 +10,8 @@ import com.example.asus.xiaozhizhi_1.R;
 /**
  * 五个标签页的基类
  * 
- * @author Kevin
- * @date 2015-10-18
+ *
+ *
  */
 public class BasePager {
 

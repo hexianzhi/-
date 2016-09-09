@@ -11,9 +11,9 @@
 
     <style name="Bottom_Tab_Style">
         <item name="android:layout_width">wrap_content</item>
+        <item name="android:button">@null</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@android:color/transparent</item>
-        <item name="android:button">@null</item>
         <item name="android:drawablePadding">1dp</item>
         <item name="android:paddingTop">7dp</item>
         <item name="android:paddingLeft">7dp</item>
